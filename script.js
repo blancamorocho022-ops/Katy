@@ -16,7 +16,7 @@ boton.addEventListener("click", () => {
 });
 
 btnSi.addEventListener("click", () => {
-    respuesta.textContent = "Ushhh me cae mal sabia que diria que si💕✨";
+    respuesta.textContent = "Ushhh me cae mal, sabia que diria que si💕✨";
 });
 
 btnObvio.addEventListener("click", () => {
