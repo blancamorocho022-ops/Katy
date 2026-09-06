@@ -38,6 +38,61 @@ body::before {
 
 @keyframes galaxia {
     from {
+        /* ESTRELLAS FUGACES */
+body::after {
+    content: "";
+    position: fixed;
+    width: 180px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, white);
+    top: 20%;
+    left: -200px;
+    transform: rotate(-25deg);
+    filter: drop-shadow(0 0 6px white);
+    animation: estrellaFugaz 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes estrellaFugaz {
+    0% {
+        left: -200px;
+        top: 15%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    30% {
+        left: 110%;
+        top: 45%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 110%;
+        top: 45%;
+        opacity: 0;
+    }
+}
+
+/* DESTELLO DEL CORAZÓN */
+.corazon {
+    display: inline-block;
+    animation: latido 1s infinite;
+    filter: drop-shadow(0 0 10px #ff69b4);
+}
+
+@keyframes latido {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.35);
+    }
+}
         transform: rotate(-20deg) scale(1);
     }
 
