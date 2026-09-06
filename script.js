@@ -16,9 +16,9 @@ boton.addEventListener("click", () => {
 });
 
 btnSi.addEventListener("click", () => {
-    respuesta.textContent = "Sabía que dirías que sí ❤️✨";
+    respuesta.textContent = "Ushhh me cae mal sabia que diria que si✨";
 });
 
 btnObvio.addEventListener("click", () => {
-    respuesta.textContent = "Entonces oficialmente somos novios ❤️🌌";
+    respuesta.textContent = "Igual no se podia negar muejejeje🌌";
 });
