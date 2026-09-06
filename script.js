@@ -1,30 +1,24 @@
-const estrellas = document.querySelector(".estrellas");
-
-for (let i = 0; i < 150; i++) {
-
-    const estrella = document.createElement("div");
-
-    estrella.classList.add("estrella");
-
-    estrella.style.top = Math.random() * window.innerHeight + "px";
-    estrella.style.left = Math.random() * window.innerWidth + "px";
-
-    const tamaño = Math.random() * 3 + 1;
-
-    estrella.style.width = tamaño + "px";
-    estrella.style.height = tamaño + "px";
-
-    estrella.style.animationDuration = (Math.random() * 3 + 2) + "s";
-
-    estrellas.appendChild(estrella);
-
-}
-const boton = document.getElementById("btn");
+const boton = document.getElementById("btnComenzar");
+const inicio = document.getElementById("inicio");
 const mensaje = document.getElementById("mensaje");
+const musica = document.getElementById("musica");
+
+const btnSi = document.getElementById("btnSi");
+const btnObvio = document.getElementById("btnObvio");
+const respuesta = document.getElementById("respuesta");
 
 boton.addEventListener("click", () => {
-    musica.play();
-    musica.currentTime= 35;
+    inicio.classList.add("oculto");
     mensaje.classList.remove("oculto");
-    boton.style.display = "none";
+
+    musica.currentTime = 0;
+    musica.play();
+});
+
+btnSi.addEventListener("click", () => {
+    respuesta.textContent = "Sabía que dirías que sí ❤️✨";
+});
+
+btnObvio.addEventListener("click", () => {
+    respuesta.textContent = "Entonces oficialmente somos novios ❤️🌌";
 });
